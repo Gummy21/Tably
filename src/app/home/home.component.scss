@@ -1,5 +1,62 @@
+.hero{
+    background: url('../../assets/images/home-two.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:70vh;
+    padding-top:3vh;
+    padding-bottom: 5vh;
+}
+#grid-home{
+    padding-top:10vh;
+    color:white;
+}
 
+.hero-header { 
+    font-weight:600;
+    letter-spacing: 0.1em;
+    text-align:center;
+    text-shadow:0.1em 0.1em black;
+   
+}
 
-.home{
+.hero-signup {
+
+   text-align:center;
+   margin-top:3rem; 
+}
+
+#signup-btn {
+    border-radius:10px;
+    padding:0.8rem;
+    background-color: #ca2925;
+    font-size:1.3rem;
+    font-weight:600;
+    letter-spacing: 0.2rem;
+    color:white;
+}
+
+.preview{
+    padding-top:10vh;
+    height:40vh;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    background-color:white;
+}
+
+#tab-preview {
+    background:url('../../assets/images/home-two.jpg');
+    height: 50%;
+    margin:0.5em;
+    border-radius:10px;
+    background-size: cover;
+    width:90%;
+}
+
+#tab-text{
+    margin:0.5em;
+    letter-spacing: 0.02rem;
+
     
 }
+

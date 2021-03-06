@@ -6,7 +6,7 @@ import { AuthLoginInfo } from '../auth/login-info';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.sass']
+  styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
   form: any = {};

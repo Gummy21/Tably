@@ -6,7 +6,7 @@ import { takeUntil } from 'rxjs/operators';
 @Component({
   selector: 'app-tabs',
   templateUrl: './tabs.component.html',
-  styleUrls: ['./tabs.component.sass']
+  styleUrls: ['./tabs.component.scss']
 })
 export class TabsComponent implements OnInit, OnDestroy {
   private unsub: Subject<any> = new Subject();

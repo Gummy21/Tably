@@ -1,0 +1,44 @@
+$main-color: #F9C64F;
+
+.navbar {
+    background-color: black;
+    margin:0;
+    display:grid;
+    height:10vh;
+    grid-template-columns: 1fr 0.5fr;
+    letter-spacing: 0.2rem;
+    
+}
+
+a {
+    text-decoration: none;
+    color:white;
+    font-weight: 600;
+    
+}
+
+
+.icon {
+    margin-right:0.5em
+}
+
+.grid-brand{
+    padding: 0.9rem 0 0 1.5rem;
+    font-size:1.4rem;
+}
+
+
+
+.grid-login {
+    
+    text-align:right;
+    font-size:1rem;
+   
+    padding: 1.4rem 0.5em 0 0;
+}
+
+.links {
+    border-left:1px solid white;
+    height:50%
+}
+
