@@ -1,0 +1,115 @@
+
+:root {
+    --gutter: 20px;
+  }
+
+.tab-viewer{
+    padding-top:10vh;
+
+    height:100vh;
+    border: 1px solid black;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 5fr 1fr;
+    max-width: 100%;
+    padding-bottom:15vh;
+
+}
+
+.tabs-grid {
+    padding: var(--gutter) 0;
+    display: grid;
+    grid-gap: var(--gutter) 0;
+    grid-template-columns: var(--gutter) 1fr var(--gutter);
+    align-content: start;
+    overflow-x: scroll;
+
+      
+    height:25vh;
+    
+
+}
+
+
+.tab-grid > * {
+    grid-column: 2 / -2;
+  }
+  
+  .tab-grid > .tabs {
+    grid-column: 1 / -1;
+  }
+
+.tabs {
+    display: grid;
+    grid-gap: calc(var(--gutter) / 2);
+    grid-template-columns: 10px;
+    grid-template-rows: minmax(150px, 1fr);
+    grid-auto-flow: column;
+    grid-auto-columns: calc(50% - var(--gutter) * 2);
+  
+    overflow-x: scroll;
+    scroll-snap-type: x proximity;
+    padding-bottom: calc(.75 * var(--gutter));
+    margin-bottom: calc(-.25 * var(--gutter));
+    height: 100%;
+    max-width:95%;
+} 
+
+.tabs:before,
+.tabs:after {
+  content: '';
+  width: 10px;
+}
+
+.tab {
+    height:24.7vh;
+    width:50vw;
+    
+    flex-direction: column;
+    display:flex;
+    scroll-snap-align: center;
+    margin-right:5px;
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+}
+
+#test {
+  width:100%;
+  height:auto;
+  border-radius:10px;
+ 
+}
+#test-two{
+  padding-top:0.5em;
+  font-size:1.2em;
+  margin:0;
+
+}
+
+.viewer{
+    border: 1px solid black;
+    height:100%; 
+}
+
+.buttons {
+    
+    height:100%;
+    text-decoration: none;
+    
+}
+
+#update {
+  
+ 
+  margin-top:1rem;
+  font-size:1rem;
+  margin-right:0.5em;
+}
+
+#delete {
+  color:white;
+  background-color: #ca2925;
+  margin-left:0.5em;
+  margin-top:1rem;
+  font-size:1rem;
+}

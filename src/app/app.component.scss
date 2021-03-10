@@ -1,7 +1,7 @@
-$main-color: #F9C64F;
 
 .navbar {
-    background-color: black;
+    background-color: #9d0207;
+    color:white;
     margin:0;
     display:grid;
     height:10vh;
@@ -23,18 +23,16 @@ a {
 }
 
 .grid-brand{
-    padding: 0.9rem 0 0 1.5rem;
+    padding: 0.2rem 0 0 1.5rem;
     font-size:1.4rem;
 }
 
 
 
 .grid-login {
-    
     text-align:right;
     font-size:1rem;
-   
-    padding: 1.4rem 0.5em 0 0;
+    padding: 0.2rem 0.5em 0 0;
 }
 
 .links {
@@ -42,3 +40,21 @@ a {
     height:50%
 }
 
+@media screen and (min-width:768px){
+    .navbar {
+    
+        height:8vh;
+
+    }
+
+
+}
+@media screen and (min-width:1024px){
+    .navbar {
+    
+        height:15%;
+
+    }
+
+
+}

@@ -1,7 +1,17 @@
 
+
+
 html,body{
     margin:0;
     padding:0;
     font-size:4.125vw;
     font-family:'Sora', sans-serif;
+    height:100vh;
+}
+
+
+@media screen and (min-width:768px){
+    html,body {
+        font-size:2.125vw;
+    }
 }

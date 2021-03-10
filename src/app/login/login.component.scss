@@ -1,0 +1,42 @@
+$primary-color:#9d0207;
+$secondary-color:#003049;
+$main-color:#eae2b7;
+
+.login{
+    padding-top:10vh;
+    background-color: $main-color;
+    height:100vh;
+    letter-spacing:0.2rem;
+    min-width:100%;
+}
+
+#header {
+    text-align:center;
+}
+
+.btn {
+    background-color: $secondary-color;
+    margin-top:1rem;
+    margin-bottom:1rem;
+    
+    transition: background-color ease 200ms;
+    transition: box-shadow ease 200ms; 
+    border:none;
+}
+.form-actions {
+    margin:0;
+    
+    text-align: center;
+}
+.btn:focus,
+.btn:hover{
+    box-shadow: 0 0 0 2pt RGBA(0,48,94,1);
+    background-color: RGBA(0,48,94,1) ;
+}
+
+#signup-link {
+    color:black;
+   
+    text-decoration: none;
+    
+}
