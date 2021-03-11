@@ -1,3 +1,7 @@
+$secondary-color:#003049;
+$background-color:#eae2b7;
+
+
 .home {
     min-height:100vh;
     box-sizing: border-box;
@@ -15,7 +19,7 @@
 }
 #grid-home{
     
-    background-color:#eae2b7;
+    background-color:$background-color;
     padding-top:5vh;
     color:black;
     height: 35vh;
@@ -144,7 +148,7 @@ footer {
 
     //Preview
     .preview{
-        height:100vh;
+        height:100%;
         padding: 1em 8em 2em 8em;
        
     }
@@ -173,14 +177,23 @@ footer {
     .hero{
         height:80vh;
         
+    }
+    #grid-home{
+        height:50vh;
         
+    }
+    h2 {
+        font-size:3.6rem;
+    }
+    small {
+        font-size:1rem;
     }
 
     #signup-btn {
         border-radius:10px;
         padding:0.8rem;
         
-        font-size:1.1rem;
+        font-size:1.6rem;
         font-weight:600;
     
     }
@@ -189,16 +202,15 @@ footer {
     //Preview
     .preview{
         display:block;
-        padding: 10% 5em 2em 5em;
-        
-        box-sizing: border-box;
-         overflow-y: scroll;
+        padding: 10% 10em 2em 10em;
+        font-size:1.5rem;
+        min-height:100vh;
     }
     .desktop-grid-one{
         display:grid;
-        grid-template-rows:1fr;
-        grid-template-columns: 1fr 1fr;
-        height: 65vh;
+        grid-template-rows:30% 70%;
+        grid-template-columns: 1fr;
+        height:100vh;
         margin-bottom:5em;
         column-gap:1em;
     }
@@ -207,27 +219,23 @@ footer {
     }
     .desktop-grid-two{
         display:grid;
-        grid-template-rows:1fr;
-        grid-template-columns: 1fr 1fr;
+        grid-template-rows:30% 70%;
+        grid-template-columns: 1fr;
         padding-bottom:1em;
-        height: 65vh;
+        height:100vh;
         column-gap:1em;
     }
-    .desktop-switch-one {
-        grid-area:1/2
-    }
-    .desktop-switch-two {
-        grid-area:1/1
-    }
+   
     #tab-preview {
         width:100%;
        
     }
 
     #tab-text{
-        margin-top:25%;
+
+        margin: 0 4em 0 4em;
         padding:1.2em 10px 1em 10px;
-        height:40%;
+        height:60%;
     }
     
     //footer

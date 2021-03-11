@@ -18,8 +18,8 @@ $main-color:#eae2b7;
     background-color: $secondary-color;
     margin-top:1rem;
     margin-bottom:1rem;
-    transition: box-shadow ease 200ms; 
-    transition: background-color ease 200ms; 
+    transition: box-shadow ease 400ms; 
+    transition: background-color ease 400ms; 
     border:none;
 }
 
@@ -33,4 +33,14 @@ $main-color:#eae2b7;
     margin: 0;
     
     text-align: center;
+}
+
+@media screen and (min-width:1024px){
+    .signup{
+        padding:10vh 35% 0 35%;
+    }
+    .btn { 
+        font-size:1.2rem;
+    }
+    
 }

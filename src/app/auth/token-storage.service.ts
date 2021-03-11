@@ -35,9 +35,9 @@ export class TokenStorageService {
   }
 
 
-  public getUsername(): string {
-    return sessionStorage.getItem(USERNAME_KEY);
-    return sessionStorage.getItem(USER_ID);
+  public getUsername(): object {
+    return {Username:sessionStorage.getItem(USERNAME_KEY),User_id: sessionStorage.getItem(USER_ID)};
+
   }
 
   

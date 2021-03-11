@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,OnDestroy } from '@angular/core';
 import { AuthService } from "../auth/auth.service" 
 import { TokenStorageService } from '../auth/token-storage.service';
 import { AuthLoginInfo } from '../auth/login-info';
+import { takeUntil } from 'rxjs/operators';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-login',
@@ -9,6 +11,7 @@ import { AuthLoginInfo } from '../auth/login-info';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
+  private unsub: Subject<any> = new Subject();
   form: any = {};
   isLoggedIn = false;
   isLoginFailed = false;
@@ -29,15 +32,16 @@ export class LoginComponent implements OnInit {
       this.form.user,
       this.form.password);
 
-    this.authService.attemptAuth(this.loginInfo).subscribe(
+    this.authService.attemptAuth(this.loginInfo).pipe(takeUntil(this.unsub)).subscribe(
       data => {
+        console.log(data.userid)
         this.tokenStorage.saveToken(data.accessToken);
         this.tokenStorage.saveUsername(data.username);
-        this.tokenStorage.saveUserId(data.userId)
+        this.tokenStorage.saveUserId(data.userid)
 
         this.isLoginFailed = false;
         this.isLoggedIn = true;
-        this.reloadPage();
+        this.redirectPage();
       },
       err=> {
         console.log(err);
@@ -46,8 +50,13 @@ export class LoginComponent implements OnInit {
       });
     }
 
-  reloadPage() {
-    window.location.reload();
+  redirectPage() {
+    window.location.href="/";
   }
 
+
+  ngOnDestroy(){
+    this.unsub.next();
+    this.unsub.complete(); 
+  }
 }

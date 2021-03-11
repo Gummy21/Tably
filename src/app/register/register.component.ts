@@ -3,6 +3,7 @@ import { takeUntil } from 'rxjs/operators';
 import { AuthService } from "../auth/auth.service" 
 import { SignUpInfo } from '../auth/signup-info';
 import { Subject } from 'rxjs';
+import { TokenStorageService } from '../auth/token-storage.service';
 
 @Component({
   selector: 'app-register',
@@ -17,7 +18,7 @@ export class RegisterComponent implements OnInit, OnDestroy {
   error: any;
   signupInfo: SignUpInfo;
 
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService, private tokenStorage:TokenStorageService) { }
 
   ngOnInit() {}
 
@@ -33,6 +34,10 @@ export class RegisterComponent implements OnInit, OnDestroy {
         console.log(data);
         this.isSignedUp = true;
         this.isSignUpFailed = false;
+        this.tokenStorage.saveToken(data.accessToken);
+        this.tokenStorage.saveUsername(data.username);
+        this.tokenStorage.saveUserId(data.userid)
+        this.redirectPage()
       },
       err => {
         console.log(err);
@@ -40,6 +45,10 @@ export class RegisterComponent implements OnInit, OnDestroy {
         this.isSignUpFailed = true;
       }
     );
+  }
+
+  redirectPage() {
+    window.location.href="/";
   }
 
 

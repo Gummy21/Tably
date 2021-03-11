@@ -4,8 +4,9 @@
   </div>
   <div class="grid-login">
     <div class="links">
-      <a *ngIf="" routerLink="tabs">Tabs</a>
-      <a  routerLink="login">login</a>
+      <a *ngIf="loggedIn" routerLink="tabs">Tabs</a>
+      <a *ngIf="loggedIn" (click)="logOut()">Log out</a>
+      <a *ngIf="!loggedIn" routerLink="login">login</a>
     </div>
     
   </div>
