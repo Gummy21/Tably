@@ -35,13 +35,15 @@
             </div>
         </div>
     </section>
-    <section class="viewer">
-
+    <section class="viewer" *ngFor="let tab of tabs">
+        <pre >{{tab.tab}}</pre>
     </section>
 
     <section class="buttons">
-        <button class="btn btn-info" id="update">Update Tab</button>
+        <a routerLink="../create" class="btn btn-success" id="create">Create Tab</a>
+        <button class="btn" id="update">Update Tab</button>
         <button class="btn" id="delete">Delete Tab</button>
+        
     </section>
 
 </article>

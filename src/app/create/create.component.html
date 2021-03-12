@@ -1,0 +1,16 @@
+<section class="create-form">
+    <h1 id="header">Create a new tab</h1>
+    <form>
+        <div class="form-group">
+            
+            <input name="name" required="" placeholder="Please enter the tab's name" type="text" class="form-control" [(ngModel)]="form.name">
+        </div>
+
+        <div class="form-group">
+            <textarea name="tab" required=""  placeholder="Paste your tab here." wrap="off" [(ngModel)]="form.tab" class="form-control"></textarea>
+        </div>
+    </form>
+    <div id="button">
+        <button (click)="createTab()" class="btn btn-primary">Create</button>
+    </div>
+</section>

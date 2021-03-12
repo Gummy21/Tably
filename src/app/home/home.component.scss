@@ -13,13 +13,12 @@ $background-color:#eae2b7;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height:70vh;
+    height:50vh;
     padding-top:3vh;
     padding-bottom: 5vh;
 }
 #grid-home{
-    
-    background-color:$background-color;
+
     padding-top:5vh;
     color:black;
     height: 35vh;
@@ -65,7 +64,6 @@ $background-color:#eae2b7;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 2.2fr 0.5fr 1fr 2.2fr;
     row-gap: 1em;
-    background:#eae2b7;
     color:#424242;
     text-align:center;
     padding: 5em 2em 1em 2em;
@@ -97,9 +95,6 @@ $background-color:#eae2b7;
 }
 
 #tab-text{
-    
-   
-   
     background: inherit;
     transition: box-shadow ease 500ms;  
     border-radius:10px;
@@ -109,7 +104,7 @@ $background-color:#eae2b7;
 
 #tab-text:hover,
 #tab-text:focus  {
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    box-shadow: rgba(60, 64, 67, 0.3) 1px 2px 3px 1px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
   
     
 }
@@ -142,7 +137,7 @@ footer {
     }
     //Hero
     .hero{
-        height:60vh;
+        height:40vh;
         
     }
 
@@ -175,25 +170,25 @@ footer {
    
     //Hero
     .hero{
-        height:80vh;
+        height:60vh;
         
     }
     #grid-home{
-        height:50vh;
+        height:40vh;
         
     }
     h2 {
-        font-size:3.6rem;
+        font-size:2.5rem;
     }
     small {
-        font-size:1rem;
+        font-size:0.8rem;
     }
 
     #signup-btn {
-        border-radius:10px;
+        border-radius:15px;
         padding:0.8rem;
         
-        font-size:1.6rem;
+        font-size:1.2rem;
         font-weight:600;
     
     }

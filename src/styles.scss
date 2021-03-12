@@ -1,5 +1,5 @@
 
-
+$background-color:#eae2b7;
 
 html,body{
     margin:0;
@@ -7,6 +7,7 @@ html,body{
     font-size:4.125vw;
     font-family:'Sora', sans-serif;
     min-height:100vh;
+    background-color:$background-color;
 }
 
 

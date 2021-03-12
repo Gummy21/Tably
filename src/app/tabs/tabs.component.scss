@@ -22,7 +22,7 @@ $background-color:#eae2b7;
 .tabs-grid {
     padding: var(--gutter) 0;
     display: grid;
-    grid-gap: var(--gutter) 0;
+    column-gap: var(--gutter) 0;
     grid-template-columns: var(--gutter) 1fr var(--gutter);
     align-content: start;
     overflow-x: scroll;
@@ -34,17 +34,17 @@ $background-color:#eae2b7;
 }
 
 
-.tab-grid > * {
+.tabs-grid > * {
     grid-column: 2 / -2;
   }
   
-  .tab-grid > .tabs {
+  .tabs-grid > .tabs {
     grid-column: 1 / -1;
   }
 
 .tabs {
     display: grid;
-    grid-gap: calc(var(--gutter) / 2);
+    column-gap: calc(var(--gutter) / 2);
     grid-template-columns: 10px;
     grid-template-rows: minmax(150px, 1fr);
     grid-auto-flow: column;
@@ -95,18 +95,29 @@ $background-color:#eae2b7;
 }
 
 .buttons {
-    
+    text-align:center;
     height:100%;
     text-decoration: none;
     
 }
 
 #update {
+  color:white;
+  background-color:$secondary-color;
+  margin-top:1rem;
+  font-size:1rem;
+  margin-left:0.5em;
+  transition: box-shadow ease 400ms; 
+  transition: background-color ease 400ms; 
+  border:none;
+}
+
+#create{
   
  
   margin-top:1rem;
   font-size:1rem;
-  margin-right:0.5em;
+  margin-left:0.5em;
   transition: box-shadow ease 400ms; 
   transition: background-color ease 400ms; 
   border:none;
@@ -136,6 +147,11 @@ box-shadow: 0 0 0 2pt RGBA(0,48,94,1);
 background-color: RGBA(0,48,94,1) ;
 }
 
+#create:focus,
+#create:hover{
+box-shadow: 0 0 0 2pt rgb(35, 145, 61);
+background-color: rgb(35, 145, 61) ;
+}
 
 
 @media screen and (min-width:768px){
@@ -152,11 +168,14 @@ background-color: RGBA(0,48,94,1) ;
       
     }
     #update {
-      background-color:$secondary-color;
+     
       border:none;
       font-size:1.6rem;
     }
     #delete {
+      font-size:1.6rem;
+    }
+    #create {
       font-size:1.6rem;
     }
     .viewer{ 
@@ -166,10 +185,11 @@ background-color: RGBA(0,48,94,1) ;
     .tab-viewer {
       grid-template-rows: 1fr 3fr 1fr;
     }
+   
 }
 
 
-@media screen and (min-width:1024px){
+@media screen and (min-width:1000px){
 
   * {
     scrollbar-width: thin;
@@ -191,21 +211,30 @@ background-color: RGBA(0,48,94,1) ;
     width:4px;
     background-color: #9d0207;
     border-radius: 20px;
-    
+  }
     
   .tab-viewer {
-    padding:2em;
+    padding:6rem;
     grid-template-rows: 1fr 2fr 0.5fr;
+    
+  }
+
+  .tabs {
+    column-gap: 1em;
   }
 }
 
 
 @media screen and (min-width:1444px){
   .tab-viewer {
-    padding:4rem;
+    padding:6rem;
     
   }
 }
 
 
-}
+
+
+
+
+

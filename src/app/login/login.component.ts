@@ -10,7 +10,7 @@ import { Subject } from 'rxjs';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent implements OnInit, OnDestroy {
   private unsub: Subject<any> = new Subject();
   form: any = {};
   isLoggedIn = false;

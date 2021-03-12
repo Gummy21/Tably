@@ -14,6 +14,7 @@ import { TabsComponent } from './tabs/tabs.component';
 
 
 import { httpInterceptorProviders } from './auth/auth-interceptor';
+import { CreateComponent } from './create/create.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { httpInterceptorProviders } from './auth/auth-interceptor';
     HomeComponent,
     LoginComponent,
     RegisterComponent,
-    TabsComponent
+    TabsComponent,
+    CreateComponent
   ],
   imports: [
     BrowserModule,

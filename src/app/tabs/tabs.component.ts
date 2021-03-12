@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import {TabsService} from "../services/tabs.service"
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
+import { TokenStorageService } from '../auth/token-storage.service'
 
 @Component({
   selector: 'app-tabs',
@@ -16,9 +17,11 @@ export class TabsComponent implements OnInit, OnDestroy {
   tab: any;
   name: any;
   //add auth service + get user id
-  constructor(private tabsService: TabsService) { }
+  constructor(private tabsService: TabsService, private tokenStorage: TokenStorageService ) { }
 
 ngOnInit(){
+    this.userId = this.tokenStorage.getUsername()['User_id'];
+    
     this.tabsService.getTabs(this.userId).pipe(takeUntil(this.unsub)).subscribe(data => {
       this.tabs = data
       console.log(data)
